@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+main {
+  text-align: center;
+}
+
+#text-input {
+  margin-bottom: 1em;
+}
+
+input {
+  width: 1.5rem;
+  height: auto;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
