@@ -4,6 +4,7 @@ const numFilter = document.getElementById("num-letters");
 const inputDiv = document.getElementById("text-input");
 const inputBox = inputDiv.querySelectorAll("input");
 const resultsList = document.getElementById("results-list");
+const resetButton = document.getElementById("reset-button");
 
 //Feature: Filtering Text Boxes based on selected number
 function filterNumLetters(event) {
@@ -27,8 +28,9 @@ searchButton.addEventListener("click", getWordsFromInput);
 function getWordsFromInput(event) {
   event.preventDefault();
   let inputBoxes = [...inputBox];
+  let displayedInputBoxes = inputBoxes.filter((box) => !box.style.display);
   let searchQueryString = "";
-  inputBoxes.forEach((input) => {
+  displayedInputBoxes.forEach((input) => {
     let char = input.value;
     if (char) {
       searchQueryString += char;
@@ -36,6 +38,8 @@ function getWordsFromInput(event) {
       searchQueryString += "?";
     }
   });
+  console.log(displayedInputBoxes);
+  console.log(searchQueryString);
 
   fetch(`https://api.datamuse.com/words?sp=${searchQueryString}`)
     .then((res) => res.json())
@@ -49,5 +53,13 @@ function displayWords(dataArr) {
     let li = document.createElement("li");
     li.innerHTML = wordsArr[i];
     resultsList.appendChild(li);
+  }
+}
+
+resetButton.addEventListener("click", reset);
+
+function reset() {
+  while (resultsList.firstChild) {
+    resultsList.removeChild(resultsList.firstChild);
   }
 }
