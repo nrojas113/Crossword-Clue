@@ -22,7 +22,6 @@ function filterNumLetters(event) {
 numFilter.addEventListener("change", filterNumLetters);
 
 //Feature : Display input text when search button clicked
-
 searchButton.addEventListener("click", getWordsFromInput);
 
 function getWordsFromInput(event) {
