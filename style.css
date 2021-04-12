@@ -1,3 +1,9 @@
+body {
+  margin: 0 auto;
+}
+nav {
+  margin: 3rem;
+}
 h1 {
   text-align: center;
 }
