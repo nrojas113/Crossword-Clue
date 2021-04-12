@@ -8,5 +8,7 @@ A simple in-browswer app that provides list of possible words for your crossword
 Build with HTML, CSS, vanilla JavaScript, and utilizing Datamuse API to retrieve matching words. <br />
 Datamuse's API (https://www.datamuse.com/api/).
 
+Check out the app at https://nrojas113.github.io/Crossword-Clue/
+
 
 
