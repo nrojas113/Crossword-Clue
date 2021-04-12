@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+      rel="stylesheet"
+    />
     <title>Words Finder</title>
   </head>
   <body>
@@ -38,11 +43,20 @@
           <input id="idx-9" type="text" maxlength="1" />
           <input id="idx-10" type="text" maxlength="1" />
         </div>
-        <button type="submit" id="search-button">Search</button>
+        <button
+          class="btn"
+          type="submit"
+          id="search-button"
+          style="display: ''"
+        >
+          Search
+        </button>
       </form>
       <section>
-        <button id="reset-button">Reset</button>
-        <h2>Results:</h2>
+        <button class="btn" id="reset-button" style="display: none">
+          Reset
+        </button>
+        <h2>Matching Words</h2>
         <ul id="results-list"></ul>
       </section>
     </main>

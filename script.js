@@ -38,13 +38,13 @@ function getWordsFromInput(event) {
       searchQueryString += "?";
     }
   });
-  console.log(displayedInputBoxes);
-  console.log(searchQueryString);
 
   fetch(`https://api.datamuse.com/words?sp=${searchQueryString}`)
     .then((res) => res.json())
     .then((data) => displayWords(data))
     .catch((err) => console.log("something went wrong", err));
+  searchButton.style.display = "none";
+  resetButton.style.display = "";
 }
 
 function displayWords(dataArr) {
@@ -56,10 +56,15 @@ function displayWords(dataArr) {
   }
 }
 
+//Feature: Reset by clearing the words list & input boxes
 resetButton.addEventListener("click", reset);
 
 function reset() {
   while (resultsList.firstChild) {
     resultsList.removeChild(resultsList.firstChild);
   }
+  searchButton.style.display = "";
+  resetButton.style.display = "none";
+  let inputBoxes = [...inputBox];
+  inputBoxes.forEach((input) => (input.value = ""));
 }

@@ -1,8 +1,11 @@
 body {
   margin: 3rem auto;
+  font-family: "Indie Flower", cursive;
 }
 h1 {
   text-align: center;
+  font-size: 3em;
+  text-shadow: mistyrose;
 }
 main {
   text-align: center;
@@ -18,4 +21,40 @@ input {
   margin-top: 1rem;
   font-size: 1.2rem;
   text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+li {
+  padding: 0.5em;
+  font-size: 1.5em;
+}
+
+.btn {
+  box-shadow: 2px 2px 2px #666666;
+  border-radius: 10px;
+  padding: 0.7em;
+  font-size: 1em;
+  color: white;
+}
+
+#search-button {
+  background: #0099cc;
+  border: 2px solid #0099cc;
+}
+
+#search-button:hover {
+  background: white;
+  color: #0099cc;
+}
+
+#reset-button {
+  background: #e75a5a;
+  border: 2px solid #e75a5a;
+}
+
+#reset-button:hover {
+  background: white;
+  color: #e75a5a;
 }
