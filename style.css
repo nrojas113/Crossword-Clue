@@ -62,11 +62,6 @@ header {
   display: flex;
   justify-content: flex-end;
   margin: 0 auto;
-  /* position: fixed;
-  top: 10px;
-  right: 50px;
-  width: 100%;
-  text-align: end; */
   font-size: 1rem;
 }
 
